@@ -31,13 +31,16 @@ const TodoList = () => {
         fetchTodos();
     }, 60 * 60 * 1000); // 1시간마다 실행(60분 * 60초 * 1000ms)
 
-    return () => clearInterval(interval); // 컴포넌트 언마운트 시 정리
+    return () => clearInterval(interval);
   }, []);
 
 
   // 할 일 추가
   const addTodo = () => {
-    if (!task) return message.warning("할 일을 입력해주세요.");
+    // 엔터키 이벤트의 기본 동작을 막음 (중복 실행 방지)
+    // if (e) e.preventDefault();
+
+    if (!task)  return message.warning("할 일을 입력해주세요.");
 
     api.post("/api/todos", { task })
       .then(response => {
@@ -101,10 +104,6 @@ const TodoList = () => {
         placeholder="할 일을 입력하세요" 
         value={task} 
         onChange={(e) => setTask(e.target.value)} 
-        onPressEnter={(e) => {
-            e.preventDefault(); // 기본 동작 방지 (중복 실행 방지)
-            addTodo();
-          }}
       />
       <Button type="primary" onClick={addTodo} className="Todo-btn" style={{ marginTop: "10px", marginBottom: "40px" }}>
         추가하기
@@ -132,7 +131,6 @@ const TodoList = () => {
               <Input
                 value={editTask}
                 onChange={(e) => setEditTask(e.target.value)}
-                onPressEnter={() => updateTodo(todo.id)}
                 style={{ width: "60%" }}
               />
             ) : (
