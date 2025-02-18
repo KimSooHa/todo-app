@@ -37,7 +37,7 @@ todo-api : https://github.com/KimSooHa/todo-api
 2. 클론 및 설치
 
 ```shell
-    git clone https://github.com/your-repo/to-do-app.git
+    git clone https://github.com/KimSooHa/todo-app.git
     cd todo-app
     npm install
 ```
