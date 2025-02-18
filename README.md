@@ -32,7 +32,8 @@ todo-api : https://github.com/KimSooHa/todo-api
 ## 🚀 실행 방법
 
 1. 환경 설정
-	•	Node.js 및 npm (또는 yarn), Ant Design이 설치되어 있어야 합니다.
+
+- Node.js 및 npm (또는 yarn), Ant Design이 설치되어 있어야 합니다.
 
 2. 클론 및 설치
 
