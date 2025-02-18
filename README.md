@@ -50,7 +50,7 @@ todo-api : https://github.com/KimSooHa/todo-api
 
 <br/>
 
-> 백엔드 실행 방법은 [GitHub](https://github.com/KimSooHa/todo-api, "todo-api")의 README.md를 참고해주세요.
+> 백엔드 실행 방법은 [GitHub](https://github.com/KimSooHa/todo-api)의 README.md를 참고해주세요.
 
 <br/>
 
@@ -75,7 +75,7 @@ Input 컴포넌트를 사용하여 사용자가 할 일을 입력할 수 있게 
 
 <br/>
 
-## 📝 API 명세 (예시)
+## 📝 API 명세
 <br/>
 
 API Endpoints:  
@@ -95,6 +95,7 @@ API Endpoints:
 - 설명: 할 일의 완료 여부를 변경합니다.
 - 요청: { ynType: "Y" | "N" }
 - 응답: 완료 여부가 변경된 할 일
+
 4. PUT /api/todos/{id}/deleteYn
 - 설명: 할 일의 삭제 여부를 변경합니다.
 - 요청: { ynType: "Y" | "N" }
